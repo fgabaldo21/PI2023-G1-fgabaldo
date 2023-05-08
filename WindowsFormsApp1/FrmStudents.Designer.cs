@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FrmStudents
+    partial class dgvStudents
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmStudents";
+            this.SuspendLayout();
+            // 
+            // dgvStudents
+            // 
+            this.ClientSize = new System.Drawing.Size(832, 439);
+            this.Name = "dgvStudents";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

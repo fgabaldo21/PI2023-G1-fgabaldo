@@ -42,7 +42,7 @@ namespace WindowsFormsApp1 {
             {
                 if (txtKorIme.Text == username && txtLozinka.Text == password)
                 {
-                    FrmStudents frmStudents = new FrmStudents();
+                    dgvStudents frmStudents = new dgvStudents();
                     Hide();
                     frmStudents.ShowDialog();
                     Close();
