@@ -16,18 +16,6 @@ namespace WindowsFormsApp1 {
             InitializeComponent();
         }
 
-        private void lblKorIme_Click(object sender, EventArgs e) {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e) {
-
-        }
-
-        private void Form1_Click(object sender, EventArgs e) {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtKorIme.Text == "")
@@ -42,7 +30,7 @@ namespace WindowsFormsApp1 {
             {
                 if (txtKorIme.Text == username && txtLozinka.Text == password)
                 {
-                    dgvStudents frmStudents = new dgvStudents();
+                    FrmStudents frmStudents = new FrmStudents();
                     Hide();
                     frmStudents.ShowDialog();
                     Close();
@@ -52,11 +40,6 @@ namespace WindowsFormsApp1 {
                     MessageBox.Show("Krivi podaci!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void txtKorIme_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

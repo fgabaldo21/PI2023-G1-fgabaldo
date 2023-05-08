@@ -38,7 +38,6 @@
             this.lblKorIme.Size = new System.Drawing.Size(78, 13);
             this.lblKorIme.TabIndex = 0;
             this.lblKorIme.Text = "Korisničko ime:";
-            this.lblKorIme.Click += new System.EventHandler(this.lblKorIme_Click);
             // 
             // lblLozinka
             // 
@@ -55,7 +54,6 @@
             this.txtKorIme.Name = "txtKorIme";
             this.txtKorIme.Size = new System.Drawing.Size(113, 20);
             this.txtKorIme.TabIndex = 2;
-            this.txtKorIme.TextChanged += new System.EventHandler(this.txtKorIme_TextChanged);
             // 
             // txtLozinka
             // 
@@ -91,8 +89,6 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

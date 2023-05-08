@@ -10,22 +10,15 @@ using System.Windows.Forms;
 using WindowsFormsApp1.Models;
 using WindowsFormsApp1.Repositories;
 
-namespace WindowsFormsApp1
-{
-    public partial class dgvStudents : Form
-    {
-        public dgvStudents()
-        {
+namespace WindowsFormsApp1 {
+    public partial class FrmStudents : Form {
+        public FrmStudents() {
             InitializeComponent();
         }
 
-        private void FrmStudents_Load(object sender, EventArgs e)
-        {
-            ShowStudents();
-        }
 
-        private void ShowStudents()
-        {
+
+        private void ShowStudents() {
             List<Student> students = StudentRepository.GetStudents();
             dgvStudents.DataSource = students;
 
@@ -33,6 +26,21 @@ namespace WindowsFormsApp1
             dgvStudents.Columns["FirstName"].DisplayIndex = 1;
             dgvStudents.Columns["LastName"].DisplayIndex = 2;
             dgvStudents.Columns["Grade"].DisplayIndex = 3;
+        }
+
+        private void FrmStudents_Load_1(object sender, EventArgs e) {
+            ShowStudents();
+        }
+
+        private void btnEvaluateStudent_Click(object sender, EventArgs e) {
+            if (dgvStudents.SelectedRows.Count > 0) {
+                Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
+
+                if (selectedStudent != null) {
+                    FrmEvaluation frmEvaluation = new FrmEvaluation(selectedStudents);
+                    frmEvaluation.ShowDialog();
+                }
+            }
         }
     }
 }

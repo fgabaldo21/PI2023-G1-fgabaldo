@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.Repositories
             }
 
             DB.CloseConnection();
-            return student ;
+            return student;
         }
 
         public static List<Student> GetStudents()
