@@ -1,5 +1,5 @@
 ﻿namespace WindowsFormsApp1 {
-    partial class Form1 {
+    partial class FrmLogin {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -27,7 +27,7 @@
             this.lblLozinka = new System.Windows.Forms.Label();
             this.txtKorIme = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.btnPrijava = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblKorIme
@@ -55,6 +55,7 @@
             this.txtKorIme.Name = "txtKorIme";
             this.txtKorIme.Size = new System.Drawing.Size(113, 20);
             this.txtKorIme.TabIndex = 2;
+            this.txtKorIme.TextChanged += new System.EventHandler(this.txtKorIme_TextChanged);
             // 
             // txtLozinka
             // 
@@ -62,28 +63,34 @@
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(112, 20);
             this.txtLozinka.TabIndex = 3;
+            this.txtLozinka.UseSystemPasswordChar = true;
             // 
-            // btnPrijava
+            // btnLogin
             // 
-            this.btnPrijava.Location = new System.Drawing.Point(129, 114);
-            this.btnPrijava.Name = "btnPrijava";
-            this.btnPrijava.Size = new System.Drawing.Size(86, 25);
-            this.btnPrijava.TabIndex = 4;
-            this.btnPrijava.Text = "Prijava";
-            this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnLogin.Location = new System.Drawing.Point(129, 114);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(86, 25);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Prijava";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // Form1
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 161);
-            this.Controls.Add(this.btnPrijava);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtLozinka);
             this.Controls.Add(this.txtKorIme);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorIme);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Prijava";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
@@ -97,7 +104,7 @@
         private System.Windows.Forms.Label lblLozinka;
         private System.Windows.Forms.TextBox txtKorIme;
         private System.Windows.Forms.TextBox txtLozinka;
-        private System.Windows.Forms.Button btnPrijava;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 
