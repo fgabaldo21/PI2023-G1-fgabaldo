@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Models;
+using WindowsFormsApp1.Repositories;
 
 namespace WindowsFormsApp1 {
     public partial class FrmLogin : Form {
-        string username = "nastavnik";
-        string password = "test";
+       public static Teacher LoggedTeacher { get; set; }
         public FrmLogin() {
             InitializeComponent();
         }
@@ -28,9 +29,11 @@ namespace WindowsFormsApp1 {
             }
             else
             {
-                if (txtKorIme.Text == username && txtLozinka.Text == password)
+                LoggedTeacher = TeacherRepository.GetTeacher(txtKorIme.Text);
+                if (LoggedTeacher != null && LoggedTeacher.CheckPassword("txtLozinka")) ;
                 {
                     FrmStudents frmStudents = new FrmStudents();
+                    frmStudents.Text = $"{LoggedTeacher.FirstName } {LoggedTeacher.LastName}";
                     Hide();
                     frmStudents.ShowDialog();
                     Close();
