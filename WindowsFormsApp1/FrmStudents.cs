@@ -37,7 +37,7 @@ namespace WindowsFormsApp1 {
                 Student selectedStudent = dgvStudents.CurrentRow.DataBoundItem as Student;
 
                 if (selectedStudent != null) {
-                    FrmEvaluation frmEvaluation = new FrmEvaluation(selectedStudents);
+                    FrmEvaluation frmEvaluation = new FrmEvaluation(selectedStudent);
                     frmEvaluation.ShowDialog();
                 }
             }

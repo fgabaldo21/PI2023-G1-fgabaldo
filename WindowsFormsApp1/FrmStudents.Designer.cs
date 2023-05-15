@@ -38,14 +38,15 @@
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Location = new System.Drawing.Point(13, 13);
             this.dgvStudents.Name = "dgvStudents";
+            this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.Size = new System.Drawing.Size(807, 372);
             this.dgvStudents.TabIndex = 0;
             // 
             // btnEvaluateStudent
             // 
-            this.btnEvaluateStudent.Location = new System.Drawing.Point(635, 406);
+            this.btnEvaluateStudent.Location = new System.Drawing.Point(648, 400);
             this.btnEvaluateStudent.Name = "btnEvaluateStudent";
-            this.btnEvaluateStudent.Size = new System.Drawing.Size(162, 21);
+            this.btnEvaluateStudent.Size = new System.Drawing.Size(162, 36);
             this.btnEvaluateStudent.TabIndex = 1;
             this.btnEvaluateStudent.Text = "Evaluiraj studenta";
             this.btnEvaluateStudent.UseVisualStyleBackColor = true;
